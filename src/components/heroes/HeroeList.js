@@ -5,7 +5,7 @@ import HeroeCard from './HeroeCard';
 const HeroeList = ({ publisher }) => {
   const heroes = useMemo(() => getHeroesByPublisher(publisher), [publisher]);
   return (
-    <div className="card-columns">
+    <div className="card-columns animate__animated animate__fadeIn">
       {heroes.map((item) => (
         <HeroeCard key={item.id} {...item} />
       ))}
