@@ -6,10 +6,10 @@ const LoginScreen = ({ history }) => {
   const { dispatch } = useContext(AuthContext);
   const handleSubmit = () => {
     // history.push('/');
-    // history.replace('/');
+    history.replace('/');
     dispatch({
       type: types.login,
-      payload: { name: 'jhon' },
+      payload: { name: 'Jhon' },
     });
   };
 
