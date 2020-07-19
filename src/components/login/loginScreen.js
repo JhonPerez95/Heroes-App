@@ -5,12 +5,12 @@ import { types } from '../../types/types';
 const LoginScreen = ({ history }) => {
   const { dispatch } = useContext(AuthContext);
   const handleSubmit = () => {
-    // history.push('/');
-    history.replace('/');
+    const lastPath = localStorage.getItem('lastPath') || '/';
     dispatch({
       type: types.login,
       payload: { name: 'Jhon' },
     });
+    history.replace(lastPath);
   };
 
   return (
