@@ -23,7 +23,9 @@ describe('Tests a component <DashboardRoutes/>', () => {
       </MemoryRouter>
     );
 
-    console.log(wrapper.html());
     expect(wrapper).toMatchSnapshot();
+    expect(wrapper.find('.text-info').text().trim()).toBe(
+      contexValue.user.name
+    );
   });
 });
