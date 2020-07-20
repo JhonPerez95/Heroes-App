@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
+
 import { AuthContext } from '../../auth/AuthContext';
 import { types } from '../../types/types';
 
 const LoginScreen = ({ history }) => {
   const { dispatch } = useContext(AuthContext);
+
   const handleSubmit = () => {
     const lastPath = localStorage.getItem('lastPath') || '/';
     dispatch({
@@ -23,6 +26,10 @@ const LoginScreen = ({ history }) => {
       </button>
     </div>
   );
+};
+
+LoginScreen.propTypes = {
+  history: PropTypes.object.isRequired,
 };
 
 export default LoginScreen;

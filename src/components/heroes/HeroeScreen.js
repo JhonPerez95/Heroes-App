@@ -1,7 +1,9 @@
 import React from 'react';
 import { useParams, Redirect } from 'react-router-dom';
-import { getHeroesById } from '../../selectors/getHeroeById';
+import PropTypes from 'prop-types';
 import { useMemo } from 'react';
+
+import { getHeroesById } from '../../selectors/getHeroeById';
 
 const HeroeScreen = ({ history }) => {
   const { heroId } = useParams();
@@ -69,4 +71,7 @@ const HeroeScreen = ({ history }) => {
   );
 };
 
+HeroeScreen.propTypes = {
+  history: PropTypes.object.isRequired,
+};
 export default HeroeScreen;
