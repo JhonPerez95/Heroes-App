@@ -35,6 +35,6 @@ describe('Test a Component <AppRouter/>', () => {
       </AuthContext.Provider>
     );
     expect(wrapper).toMatchSnapshot();
-    expect(wrapper.find('.navbar').exists()).toBe(true);
+    expect(wrapper.find('.navbar').exists()).toBe(false);
   });
 });

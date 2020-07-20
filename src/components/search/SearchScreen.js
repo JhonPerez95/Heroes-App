@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
 import queryString from 'query-string';
 import { useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 import HeroeCard from '../heroes/HeroeCard';
 import useForm from '../../hook/useForm';
@@ -61,6 +62,10 @@ const SearchScreen = ({ history }) => {
       </div>
     </div>
   );
+};
+
+SearchScreen.propTypes = {
+  history: PropTypes.object.isRequired,
 };
 
 export default SearchScreen;
